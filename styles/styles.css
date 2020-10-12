@@ -620,13 +620,13 @@ footer {
 .goods-item {
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: flex;
+	display: grid;
+	grid-template-columns: 4fr 4fr 4fr 1fr;
 	justify-content: space-around;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
-	justify-content: space-between;
 	height: 100%;
 }
 

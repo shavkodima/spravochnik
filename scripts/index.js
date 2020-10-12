@@ -5,6 +5,6 @@ import {loadData} from './loadData.js';
 
 
 generateHeader();
-generateFooter();
+//generateFooter();
 generateCatalog();
 loadData();

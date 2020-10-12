@@ -54,6 +54,17 @@ const getData = {
             callback(result);
         })
     },
+    goodsList(f, o, callback){
+        this.get(data=>{
+            const result = data.reduce((arr, item)=>{
+                if(!arr.includes(item.category) && item.category == f && item.subOtdel == o){
+                    arr.push(item)
+                }
+                return arr;
+            },[])
+            callback(result)
+        })
+    },
 
     render(data){
         const list = document.querySelector('.goods-list');

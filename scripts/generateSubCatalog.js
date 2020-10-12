@@ -4,10 +4,11 @@ const generateSubCatalog = () =>{
     subCatalog.classList.add('subcatalog')
 
     const updateHTML = (header, list)=>{
+        subCatalog.textContent ='';
         let listSubCatalog = '';
 
         list.forEach(elem => {
-            listSubCatalog += `<li class="subcatalog-list__item"><a href="goods.html?subcat=${elem}">${elem}</a></li>
+            listSubCatalog += `<li class="subcatalog-list__item"><a href="goods.html?filial=${header}&subcat=${elem}">${elem}</a></li>
             `
         });
 
