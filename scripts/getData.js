@@ -62,13 +62,15 @@ const getData = {
                 }
                 return arr;
             },[])
-            callback(result)
+            callback(result, f, o)
         })
     },
 
-    render(data){
-        const list = document.querySelector('.goods-list');
+    render(data, status){
+            const list = document.querySelector('.goods-list');
+            const headerGoods = document.querySelector('.header-goods');
         list.innerHTML = data;
+        headerGoods.insertAdjacentHTML('beforebegin', status)
     }
 };
 

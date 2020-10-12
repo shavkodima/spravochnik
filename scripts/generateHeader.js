@@ -10,7 +10,7 @@
                           d="M20 8H4V6H20V8ZM20 13H4V11H20V13ZM20 18H4V16H20V18Z"></path>
                 </svg>
             </button>
-            <p class="logo-title">Справочник телефонов "Минсктранс"</p>
+            <a href="index.html"><p class="logo-title">Справочник телефонов "Минсктранс"</p></a>
             <form class="search" method="get" action="goods.html">
                 <input type="search" name="search" maxlength="150" class="search-input" spellcheck="false"
                        aria-label="Искать товары, новинки и вдохновение"

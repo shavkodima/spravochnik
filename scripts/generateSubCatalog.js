@@ -1,10 +1,10 @@
-const generateSubCatalog = () =>{
+const generateSubCatalog = () => {
 
     const subCatalog = document.createElement('div');
     subCatalog.classList.add('subcatalog')
 
-    const updateHTML = (header, list)=>{
-        subCatalog.textContent ='';
+    const updateHTML = (header, list) => {
+        subCatalog.textContent = '';
         let listSubCatalog = '';
 
         list.forEach(elem => {
@@ -12,7 +12,7 @@ const generateSubCatalog = () =>{
             `
         });
 
-    const subCatalogHTML =`
+        const subCatalogHTML = `
  
     <button type="button" class="btn btn-return catalog-btn" aria-expanded="true" title="Закрыть меню"
             aria-label="Закрыть меню">
@@ -28,11 +28,11 @@ const generateSubCatalog = () =>{
     </ul>
     `;
 
-    subCatalog.insertAdjacentHTML('afterbegin',  subCatalogHTML );
+        subCatalog.insertAdjacentHTML('afterbegin', subCatalogHTML);
     }
 
     document.body.insertAdjacentElement('beforeend', subCatalog);
-    return  updateHTML;
+    return updateHTML;
 
 }
 
