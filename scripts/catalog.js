@@ -1,5 +1,8 @@
-export const catalogList = ()=>{
+import generateSubCatalog from "./generateSubCatalog.js";
+import getData from "./getData.js";
 
+export const catalogList = ()=>{
+    const updateSubCategory = generateSubCatalog();
     const btnBurger = document.querySelector('.btn-burger');
     const catalog = document.querySelector('.catalog');
     const btnCloseMenu = document.querySelector('.btn-close');
@@ -22,8 +25,10 @@ export const catalogList = ()=>{
         const itemList = target.closest('.catalog-list__item');    
         
         if(itemList){
-            subcatalogHeader.innerHTML = itemList.innerHTML; 
-            generateSubCatalog(target.textContent)
+            getData.subcategory(target.textContent, data=>{
+                updateSubCategory(target.textContent, data);
+                subCatalogOpen.classList.add('subopen');
+            })
         }
     }
 
